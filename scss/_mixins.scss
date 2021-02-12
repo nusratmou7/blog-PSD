@@ -1,0 +1,72 @@
+// ----------------------------------------------
+//   ALL MIXIN FUNCTIONS
+// ----------------------------------------------
+
+
+// Font mixin
+// use -> @include font-face(font-family, font-width, font-size);
+// Example @include font-face($roboto, 700, 24px);
+@mixin font($font-family,$font-weight,$font-size){
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+
+// Scrollbars mixin
+// use -> @include scrollbars(size,  lighten(color,20%));
+// Example -> @include scrollbars(.5em,  lighten($theme-color,20%));
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+    &::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+    }
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+}
+
+// Media query *only max-width
+// use -> @include media-max(max-screen-size) {css content;}
+// Example -> @include media-max(320px) {height: 50px;}
+@mixin media-max($max){
+    @media only screen and (max-width: $max){
+        @content;
+    }
+}
+
+// Media query *only min-width
+// use -> @include media-min(min-screen-size) {css content;}
+// Example -> @include media-min(320px) {height: 50px;}
+@mixin media-min($min){
+    @media only screen and (min-width: $min){
+        @content;
+    }
+}
+
+// Media query min-width and max-width
+// use -> @include media-min-max(min-screen-size,max-screen-size) {css content;}
+// Example -> @include media-min-max(320px,480px) {height: 50px;}
+@mixin media-min-max($min,$max){
+    @media only screen and (min-width: $min) and (max-width: $max){
+        @content;
+    }
+}
+
+// Background color opacity for background color-only
+// use -> @include bg-color-opacity($color, $opacity);
+// Example -> @include bg-color-opacity(#f00, 0.5);
+@mixin bg-color-opacity($color, $opacity) {
+    background-color: $color; /* The Fallback */
+    background-color: rgba($color, $opacity);
+}
+
+// color opacity for text color
+// use -> @include color-opacity($color, $opacity);
+// Example -> @include color-opacity(#f00, 0.5);
+@mixin color-opacity($color, $opacity) {
+    color: $color; /* The Fallback */
+    color: rgba($color, $opacity);
+}

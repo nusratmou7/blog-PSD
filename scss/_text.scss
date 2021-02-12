@@ -1,0 +1,48 @@
+/*===== heading style 1 =====*/
+.heading-1{
+    @include font($GoogleSans,700,54px);
+    color: $title-text-color;
+}
+/*===== heading style 2 =====*/
+.heading-2{ 
+    @include font($GoogleSans,400,35px);
+    color: $title-text-color;
+}
+/*===== heading style 3 =====*/
+.heading-3{
+    @include font($GoogleSans,600,30px);
+    color: $title-text-color;
+}
+/*===== heading style 4 =====*/
+.heading-4{ 
+    @include font($GoogleSans,600,24px);
+    color: $title-text-color;
+}
+.heading-5{   /*===== heading style 5 =====*/  
+    @include font($GoogleSans,400,20px);
+    color: $title-text-color;
+}
+/*===== heading style 6 =====*/
+.heading-6{ 
+    @include font($GoogleSans,400,18px);
+    color: $title-text-color;
+}
+/*===== paragraph style 1 =====*/
+.p-text{
+    @include font($GoogleSans,400,16px);
+    color: $p-text-color;
+    line-height: 25px;
+    margin: 0px;
+}
+/*! ===== link style =====*/
+.link-text{  
+    text-decoration: none;
+    @include font($GoogleSans,600,16px);
+    color: $theme-color;
+    @include transition(all .2s ease-in-out);
+    &:hover,&:focus{
+        text-decoration: none;
+        outline: none;
+        color: darken($theme-color,15%);
+    }
+}

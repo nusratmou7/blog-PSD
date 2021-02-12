@@ -1,0 +1,452 @@
+/**
+ * ----------------------------------------------
+ * COLOR CODES
+ * ----------------------------------------------
+ *
+
+$white:                 #ffffff;
+$black:                 #000000;
+$theme-color:           #3aafe1;
+$title-text-color:      #2e3c40;
+$p-text-color:          #616161;
+$primary:               #FF6192;
+$color1:                #fc5f45;
+$color2:                #eb5e7b;
+$color3:                #55dfaf;
+$color4:                #b870ea;
+$color5:                #272727;
+$color6:                #23c181;
+$background-color1:     #f8f8f9;
+$background-color2:     #020202;
+*/
+/**
+ * ----------------------------------------------
+ * Font face
+ * 
+ */
+/*======= Font-roboto =======*/
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Light.ttf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: 400; }
+
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Medium.ttf);
+  font-weight: 500; }
+
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Bold.ttf);
+  font-weight: 700; }
+
+/*======= Font-Rosario =======*/
+@font-face {
+  font-family: Rosario;
+  src: url(../fonts/Rosario-Bold.ttf);
+  font-weight: 700; }
+
+@font-face {
+  font-family: Rosario;
+  src: url(../fonts/Rosario-Regular.ttf);
+  font-weight: 400; }
+
+/**
+ * ----------------------------------------------
+ *  ALL MIXIN FUNCTIONS
+ * ----------------------------------------------
+ */
+/**
+ * ----------------------------------------------
+ * 1. DEFAULT START
+ * ----------------------------------------------
+ */
+* {
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px; }
+
+body {
+  background-color: #ffffff; }
+  body::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em; }
+  body::-webkit-scrollbar-thumb {
+    background: #666666; }
+  body::-webkit-scrollbar-track {
+    background: #b3b3b3; }
+
+.page-wrapper {
+  position: relative; }
+
+/**
+ * ----------------------------------------------
+ * 1.2. For section-header
+ * ----------------------------------------------
+ */
+.section-header {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 70px;
+  padding: 0 20px; }
+  .section-header .heading-2 {
+    margin-bottom: 20px;
+    letter-spacing: 1px; }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    .section-header {
+      margin-bottom: 45px; }
+      .section-header .heading-2 {
+        font-size: 40px; }
+      .section-header .p-text {
+        padding: 0 20px; } }
+  @media screen and (min-width: 369px) and (max-width: 480px) {
+    .section-header {
+      margin-bottom: 45px; }
+      .section-header .heading-2 {
+        font-size: 35px; } }
+  @media screen and (min-width: 320px) and (max-width: 368px) {
+    .section-header {
+      margin-bottom: 45px; }
+      .section-header .heading-2 {
+        font-size: 30px; } }
+  @media screen and (min-width: 240px) and (max-width: 319px) {
+    .section-header {
+      margin-bottom: 45px; }
+      .section-header .heading-2 {
+        font-size: 26px; } }
+
+.c-mb10 {
+  margin-bottom: 10px; }
+
+.c-mb20 {
+  margin-bottom: 20px; }
+
+.c-mb50 {
+  margin-bottom: 50px; }
+
+.c-mt10 {
+  margin-top: 10px; }
+
+.c-mt20 {
+  margin-top: 20px; }
+
+.c-mt50 {
+  margin-top: 50px; }
+
+/**
+ * ----------------------------------------------
+ * 1.2. For Fixed Gap
+ * ----------------------------------------------
+ */
+.white-space {
+  height: 130px;
+  width: 100%; }
+  @media only screen and (min-width: 1370px) {
+    .white-space {
+      height: 160px; } }
+  @media only screen and (max-width: 500px) {
+    .white-space {
+      height: 80px; } }
+  @media only screen and (max-width: 400px) {
+    .white-space {
+      height: 50px; } }
+
+/**
+ * ----------------------------------------------
+ * 1.3. For Tag Fixing
+ * ----------------------------------------------
+ */
+a {
+  text-decoration: none; }
+  a:hover, a:focus {
+    text-decoration: none;
+    outline: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px; }
+
+.fix {
+  margin: 0px;
+  padding: 0px; }
+
+.p-none {
+  padding: 0px; }
+
+.m-none {
+  margin: 0px; }
+
+.clear {
+  clear: both; }
+
+.btn-rounded {
+  /*===== button rounded style =====*/
+  display: inline-block;
+  line-height: 24px;
+  padding: 12px 30px;
+  text-align: center;
+  background-color: #333;
+  color: #ffffff;
+  font-family: "Rosario", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  .btn-rounded.btn-o {
+    background-color: #ffffff;
+    color: #333;
+    border-color: #333; }
+
+.btn-rounded:hover, .btn-rounded:focus {
+  background-color: #0d0d0d;
+  border-color: #0d0d0d;
+  outline: none;
+  color: #ffffff; }
+
+.btn-square {
+  /*===== button square style =====*/
+  display: inline-block;
+  line-height: 45px;
+  width: 180px;
+  height: 50px;
+  text-align: center;
+  background-color: #333;
+  color: #ffffff;
+  font-family: "Rosario", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: 2px solid #333;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  .btn-square.btn-o {
+    background-color: #ffffff;
+    color: #333;
+    border-color: #333; }
+
+.btn-square:hover, .btn-square:focus {
+  background-color: #0d0d0d;
+  border-color: #0d0d0d;
+  outline: none;
+  color: #ffffff; }
+
+.btn-circle {
+  /*===== button circle style =====*/
+  display: inline-block;
+  line-height: 45px;
+  width: 180px;
+  height: 50px;
+  text-align: center;
+  background-color: #333;
+  color: #ffffff;
+  font-family: "Rosario", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+  border: 2px solid #333;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  .btn-circle.btn-o {
+    background-color: #ffffff;
+    color: #333;
+    border-color: #333; }
+
+.btn-circle:hover, .btn-circle:focus {
+  background-color: #0d0d0d;
+  border-color: #0d0d0d;
+  outline: none;
+  color: #ffffff; }
+
+.heading-1 {
+  /*===== heading style 1 =====*/
+  font-family: "Rosario", sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  color: #595959; }
+
+.heading-2 {
+  /*===== heading style 2 =====*/
+  font-family: "Rosario", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: #595959; }
+
+.heading-3 {
+  /*===== heading style 3 =====*/
+  font-family: "roboto", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #595959; }
+
+.heading-4 {
+  /*===== heading style 4 =====*/
+  font-family: "Rosario", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #595959; }
+
+.heading-5 {
+  /*===== heading style 5 =====*/
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #595959; }
+
+.heading-6 {
+  /*===== heading style 6 =====*/
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #595959; }
+
+.p-text {
+  /*===== paragraph style 1 =====*/
+  font-family: "roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #616161;
+  line-height: 25px;
+  margin: 0px; }
+  @media only screen and (max-width: 700px) {
+    .p-text {
+      font-size: 14px; } }
+
+.link-text {
+  /*===== link style 1 =====*/
+  text-decoration: none;
+  font-family: "Rosario", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  .link-text:hover, .link-text:focus {
+    text-decoration: none;
+    outline: none;
+    color: #0d0d0d; }
+
+.input-field {
+  /*===== input field style 1 =====*/
+  border: 1px solid #616161;
+  padding: 12px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Rosario", sans-serif;
+  font-weight: 400;
+  font-size: 14px; }
+  .input-field:hover::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #616161;
+    opacity: 1;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+  .input-field:hover::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #616161;
+    opacity: 1;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+  .input-field:hover:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #616161;
+    opacity: 1;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+  .input-field:hover:-moz-placeholder {
+    /* Firefox 18- */
+    color: #616161;
+    opacity: 1;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+  .input-field:focus {
+    outline: none;
+    border-color: #333; }
+    .input-field:focus::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #616161;
+      opacity: 1;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear; }
+    .input-field:focus::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #616161;
+      opacity: 1;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear; }
+    .input-field:focus:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #616161;
+      opacity: 1;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear; }
+    .input-field:focus:-moz-placeholder {
+      /* Firefox 18- */
+      color: #616161;
+      opacity: 1;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear; }

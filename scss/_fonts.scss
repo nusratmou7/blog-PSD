@@ -1,0 +1,10 @@
+/**
+ * ----------------------------------------------
+ * Font face
+ * 
+ */
+$GoogleSans: "GoogleSans", sans-serif;
+// GoogleSans
+@include font-face($GoogleSans, '../fonts/GoogleSans-Regular', 400);
+@include font-face($GoogleSans, '../fonts/GoogleSans-Medium', 500);
+@include font-face($GoogleSans, '../fonts/GoogleSans-Bold', 700);

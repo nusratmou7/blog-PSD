@@ -1,0 +1,209 @@
+.aboutus-header{
+	background: #fff url('../images/aboutus-bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 100%;
+	object-fit: contain;
+	padding: 60px 0;
+	@include media-min(1920px){
+		height: 450px;
+	}
+	@include media-max(767px){
+		padding: 20px 0;
+	}
+	.heading-1{
+		color: #fff;
+		padding: 120px 0;
+		@include media-min(1920px){
+			padding: 164px 0;
+		}
+
+	}
+}
+.accuhit-story{
+	padding: 100px 0;
+	.section-heading{
+		margin-bottom: 40px;
+		.title{
+			font-weight: normal;
+        	position: relative;       
+			max-width: 550px; 
+			margin: 0 auto;
+			@include media-max(600px){
+				font-size: 28px;
+				max-width: 400px;
+			}
+			@include media-max(480px){
+				font-size: 24px;
+				max-width: 300px;
+			}
+			&:before{
+				content: 'The AccuHit Story';
+				position:absolute;
+	            font-size: 65px;
+	            color:rgba(89, 89, 89, 0.05);
+	            left: 0px;
+	            top: -18px;
+	            @include media-max(600px){
+	            	font-size: 45px;
+	            	top: -14px;
+	            }
+	            @include media-max(480px){
+	            	font-size: 35px;
+	            	top: -7px;
+	            }	
+			}
+		}
+	}
+	.p-text{
+		@include font($GoogleSans,400,16px);
+		max-width: 395px;
+		width: 100%;
+		margin: 0 auto;
+		line-height: 1.63;
+		color: #595959;
+	}
+	.accuhit-story-img{
+		margin-top: 50px;
+		.images{
+			text-align: center;
+			img{
+				max-width: 100%;
+			}
+		}
+	}
+}
+.how-to-use{
+	.single-item{
+		text-align: center;
+		@include media-max(767px){
+			margin-bottom: 30px;
+		}
+		.icon-img{
+			margin-bottom: 40px;
+			img{
+			    max-width: 60px;
+			    width: 100%;
+			    height: 60px;
+			}
+		}
+		.heading-2{
+			@include font($GoogleSans,500,35px);
+			color: #595959;
+			@include media-max(991px){
+				font-size: 24px;
+			}
+		}
+		.p-text{
+			@include font($GoogleSans,400,16px);
+			line-height: 1.63;
+			color: #595959;
+		}
+	}
+}
+.inventor-section{
+	padding: 100px 0;
+	.containt{
+		padding: 54px 0;
+		@include media-min(1920px){
+			padding:120px 0;
+		}
+		.p-text{
+			@include font($GoogleSans,400,16px);
+		  line-height: 1.50;
+		  color: #595959;
+		}
+		.inventor-name{
+			@include font($GoogleSans,500,24px);
+			margin-top: 20px;
+			color: #595959;
+			span{
+			  	font-weight: normal;
+			}
+
+		}
+	}
+	.inventor-images{
+		text-align: center;
+		img{
+			max-width: 100%;
+		}
+	}
+}
+.magazin-say-section{
+	.section-heading{
+		margin-bottom: 40px;
+		.title{
+			font-weight: normal;
+        	position: relative;       
+			max-width: 1056px; 
+			margin: 0 auto;
+			 @include media-min-max(1920px, 3000px){
+			 	max-width: 1300px;
+			 }
+			 @include media-max(1199px){
+			 	font-size: 28px;
+			 	max-width: 750px;
+			 }
+			 @include media-max(480px){
+			 	font-size: 24px;
+			 }
+			&:before{
+				content: 'What The Top Golf Magazines Say’s';
+				position:absolute;
+	            font-size: 65px;
+	            color:rgba(89, 89, 89, 0.05);
+	            left: 0px;
+	            top: -18px;
+	            @include media-min(1920px){
+	            	text-transform: uppercase;
+
+			 	}
+	             @include media-max(1199px){
+	             	font-size:45px;
+	             	top: -14px; 
+
+	             }
+	             @include media-max(991px){
+	             	visibility: hidden;
+	             }	
+			}
+		}
+	}
+	.single-comment{
+		margin-bottom: 50px;
+		.p-text{
+			@include font($GoogleSans,400,16px);
+			  line-height: 1.59;
+			  color: #595959;
+			  margin-bottom: 10px;
+			  padding-bottom: 10px;
+			  border-bottom: 1px solid rgba(151, 151, 151, 0.1);
+			  max-width: 361px;
+			  width: 100%;
+			  @include media-min(1920px){
+			  	margin: 0 auto;
+			  }
+			  @include media-max(767px){
+				margin: 0 auto;
+			  }			  
+		}
+		.companey{
+			max-width: 210px;
+    		margin: 0 auto;
+    		@include media-min-max(1200px,3000px){
+				max-width: 285px;
+    		}			
+			.magazin-name{
+				@include font($GoogleSans,500,16px);
+				  line-height: 1.25;
+				  letter-spacing: normal;
+				  color: #595959;
+			}
+			.editor-text{
+				@include font($GoogleSans,400,14px);
+			  color: #a6a6a6;
+			}
+		}
+	}
+}
